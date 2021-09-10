@@ -1,0 +1,19 @@
+<h1>Project Gallery</h1>
+<form class="row" (ngSubmit)="updateProject()">
+    <div class="col-6">
+        <label class="form-label">Organization</label>
+        <select class="form-select mt-2" name="organization" [(ngModel)] = "organization">
+            <option value="ABC Organization">ABC Organization</option>
+            <option value="XYZ Organization">XYZ Organization</option>
+            <option value="MNO Organization">MNO Organization</option>
+            <option value="PQR Organization">PQR Organization</option>
+        </select>
+    </div>
+    <div class="col-6 d-flex align-items-center pt-4 mt-3">
+        <input type="file" (change)="fileUploadChange($event)" multiple >
+        <button class="btn btn-danger" (click)="uploadFile()">Upload</button>
+    </div>
+    <div class="col-12 mt-3 d-flex justify-content-end">
+        <button type="submit" class="btn btn-danger">Next</button>
+    </div>
+</form>

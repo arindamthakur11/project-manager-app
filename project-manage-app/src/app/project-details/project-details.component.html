@@ -1,0 +1,45 @@
+
+    <h1>Project Details</h1>
+    <form class="row mt-4" [formGroup] = "projectDetails" (ngSubmit)="createProject()">
+        <div class="col-6">
+            <label class="form-label">Organization</label>
+            <select class="form-select mt-2" formControlName="organization">
+                <option value="ABC Organization">ABC Organization</option>
+                <option value="XYZ Organization">XYZ Organization</option>
+                <option value="MNO Organization">MNO Organization</option>
+                <option value="PQR Organization">PQR Organization</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label class="form-label">Category</label>
+            <select class="form-select mt-2" formControlName="category">
+                <option value="A Category">A Category</option>
+                <option value="B Category">B Category</option>
+                <option value="C Category">C Category</option>
+                <option value="D Category">D Category</option>
+            </select>
+        </div>
+        <div class="col-6 form-group mt-3">
+            <label>Activity</label>
+            <input type="text" placeholder="Enter Activity" class="form-control" formControlName="activity">
+        </div>
+        <div class="col-6 form-group mt-3">
+            <label>Title</label>
+            <input type="text" placeholder="Enter Title" class="form-control" formControlName="title">
+        </div>
+        <div class="col-6 form-group mt-3">
+            <label>Minimum Age</label>
+            <input type="text" placeholder="Enter Minimum Age" class="form-control" formControlName="minAge">
+        </div>
+        <div class="col-6 form-group mt-3">
+            <label>Maximum Age</label>
+            <input type="text" placeholder="Enter Maximum Age" class="form-control" formControlName="maxAge">
+        </div>
+        <div class="col-12 form-group mt-3">
+            <label>Overview Description</label>
+            <textarea type="text" placeholder="Overview Description" class="form-control" formControlName="desc"></textarea>
+        </div>
+        <div class="col-12 mt-3 d-flex justify-content-end">
+            <button type="submit" class="btn btn-danger">Next</button>
+        </div>
+    </form>
